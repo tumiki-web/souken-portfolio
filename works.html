@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>施工実績｜株式会社 蒼建｜建設会社Webサイト制作事例｜TUMIKI Web.</title>
-    <meta name="description" content="TUMIKI Web.がポートフォリオとして制作した架空企業のWebサイトです。実在する同名・類似名の企業・団体・人物とは一切関係ありません。人と街の営みに寄り添う、蒼建の仕事。">
+    <meta name="description" content="TUMIKI Web.がポートフォリオとして制作した架空企業のWebサイトです。実在する同名・類似名の企業・団体・人物とは一切関係ありません。住宅・店舗・オフィス・地域施設まで、用途や規模の異なる建築に向き合う株式会社 蒼建の施工実績。">
     <meta name="theme-color" content="#16364b">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:site_name" content="TUMIKI Web.｜架空企業サイト制作事例">
     <meta property="og:title" content="施工実績｜株式会社 蒼建｜建設会社Webサイト制作事例｜TUMIKI Web.">
-    <meta property="og:description" content="TUMIKI Web.がポートフォリオとして制作した架空企業のWebサイトです。実在する同名・類似名の企業・団体・人物とは一切関係ありません。人と街の営みに寄り添う、蒼建の仕事。">
+    <meta property="og:description" content="TUMIKI Web.がポートフォリオとして制作した架空企業のWebサイトです。実在する同名・類似名の企業・団体・人物とは一切関係ありません。住宅・店舗・オフィス・地域施設まで、用途や規模の異なる建築に向き合う株式会社 蒼建の施工実績。">
     <!-- 公開URLと画像確定後にcanonical・og:url・og:imageを追加 -->
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -41,44 +41,105 @@
       <a class="mobile-contact" href="contact.html">お問い合わせ <span class="arrow" aria-hidden="true">↗</span></a>
     </nav>
     <main id="main">
-      <section class="page-hero">
+      <section class="page-hero service-page-hero works-page-hero">
         <div class="wrap">
           <nav class="breadcrumbs" aria-label="パンくず">
             <a href="index.html">HOME</a>
             <span aria-hidden="true">/</span>
             <span>施工実績</span>
           </nav>
-          <p class="eyebrow">SOKEN CONSTRUCTION</p>
-          <h1>WORKS</h1>
-          <p class="page-ja">施工実績</p>
+          <div class="service-hero-layout">
+            <div>
+              <p class="eyebrow">SOKEN CONSTRUCTION</p>
+              <h1>WORKS</h1>
+              <p class="page-ja">施工実績</p>
+            </div>
+            <div class="service-hero-copy works-hero-copy">
+              <p class="service-hero-title"><span class="service-line">街に残る、</span><br>私たちの仕事。</p>
+              <p>住まい、商い、働く場所、地域の居場所。<br>用途や規模が違っても、使う人を想うことは変わりません。</p>
+              <p>一つひとつの場所に向き合い、<br>街のこれからへつながる建物をつくります。</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
-        <div class="wrap page-body">
-          <h2 class="section-title">その場所の、これからをつくる。</h2>
-          <p class="copy">住まい、商い、働く場所。それぞれの目的と向き合った仕事をご紹介します。</p>
-          <article class="detail-block" id="house">
-            <div class="media " data-label="01 / RESIDENCE"><img src="assets/images/work-house.jpg" alt="光と庭をつなぐ家の外観" width="1200" height="900" loading="lazy" decoding="async" data-optional></div>
-            <div class="work-meta"><span>住宅 / 新築</span><span>福岡市西区 · 2025</span></div>
-            <h2>光と庭をつなぐ家</h2>
-            <p>庭と室内がゆるやかにつながる住まい。家族が集まる場所に自然光を取り込み、日々の暮らしに心地よい余白をつくりました。</p>
+      <section class="works-portfolio" aria-label="施工実績一覧">
+        <div class="works-projects">
+          <article class="works-project" id="house">
+            <figure class="works-project-image"><img src="assets/images/works-house.webp" alt="緑の庭と大きな開口部を備えた二階建て住宅の外観" width="1448" height="1086" loading="lazy" decoding="async"></figure>
+            <div class="works-project-copy">
+              <div class="works-project-meta">
+                <span class="works-project-number">01</span>
+                <p>住宅</p>
+              </div>
+              <h2>光と庭をつなぐ家</h2>
+              <p>庭と室内がゆるやかにつながる住まい。大きな開口から光と緑を取り込み、家族が集まる場所に、季節の変化を感じられる余白をつくりました。</p>
+            </div>
           </article>
-          <article class="detail-block" id="shop">
-            <div class="media " data-label="02 / COMMERCIAL"><img src="assets/images/work-shop.jpg" alt="街角のベーカリーの内観" width="1200" height="900" loading="lazy" decoding="async" data-optional></div>
-            <div class="work-meta"><span>店舗 / 改修</span><span>福岡市中央区 · 2025</span></div>
-            <h2>街角のベーカリー</h2>
-            <p>訪れる人にも、働く人にもやさしい店舗へ。木の温かさを生かしながら、接客と作業の動線を整理した改修計画です。</p>
+          <article class="works-project works-project--reverse" id="shop">
+            <figure class="works-project-image works-project-image--bakery"><img src="assets/images/works-bakery.webp" alt="ガラス面と木材、植栽が調和するベーカリーの外観" width="1086" height="1448" loading="lazy" decoding="async"></figure>
+            <div class="works-project-copy">
+              <div class="works-project-meta">
+                <span class="works-project-number">02</span>
+                <p>店舗・商業施設</p>
+              </div>
+              <h2>焙煎のベーカリー</h2>
+              <p>街角に開かれた、木の温もりを感じるベーカリー。店内の気配が自然に伝わるガラス面と、訪れる人を迎える植栽を整え、日常に馴染む佇まいを目指しました。</p>
+            </div>
+          </article>
+          <article class="works-project" id="office">
+            <figure class="works-project-image"><img src="assets/images/works-office.webp" alt="自然光と植栽を取り込んだ開放的なオフィス空間" width="1448" height="1086" loading="lazy" decoding="async"></figure>
+            <div class="works-project-copy">
+              <div class="works-project-meta">
+                <span class="works-project-number">03</span>
+                <p>オフィス</p>
+              </div>
+              <h2>光が巡るワークプレイス</h2>
+              <p>窓辺の光と緑が、働く場所の奥まで届くオフィス。集中と対話の場を緩やかに分け、働く人が気持ちよく行き来できる、明るく柔軟な空間に整えました。</p>
+            </div>
+          </article>
+          <article class="works-project works-project--reverse" id="renovation">
+            <figure class="works-project-image"><img src="assets/images/works-renovation.webp" alt="既存の木の柱と梁を活かして再生した住宅の室内" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+            <div class="works-project-copy">
+              <div class="works-project-meta">
+                <span class="works-project-number">04</span>
+                <p>リノベーション</p>
+              </div>
+              <h2>木を活かした住まいの再生</h2>
+              <p>受け継がれてきた柱と梁を残し、今の暮らしに合う住まいへ。既存の木が持つ表情を丁寧に整え、新しい素材と馴染ませながら、時間のつながりを感じる空間に再生しました。</p>
+            </div>
+          </article>
+          <article class="works-project" id="landscape">
+            <figure class="works-project-image"><img src="assets/images/works-plaza.webp" alt="植栽と歩行空間、ベンチを備えた建物前の広場" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+            <div class="works-project-copy">
+              <div class="works-project-meta">
+                <span class="works-project-number">05</span>
+                <p>外構・ランドスケープ</p>
+              </div>
+              <h2>緑と人をつなぐ外構計画</h2>
+              <p>建物への動線に植栽と小さな居場所を重ねた外構計画。歩く人、立ち止まる人、それぞれが心地よく過ごせるよう、舗装と緑のバランスを丁寧に整えました。</p>
+            </div>
+          </article>
+          <article class="works-project works-project--reverse" id="community">
+            <figure class="works-project-image"><img src="assets/images/works-community.webp" alt="大きな軒と広場を備え、地域に開かれた交流施設の外観" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+            <div class="works-project-copy">
+              <div class="works-project-meta">
+                <span class="works-project-number">06</span>
+                <p>公共・地域施設</p>
+              </div>
+              <h2>地域にひらく交流センター</h2>
+              <p>大きな軒と広場が、屋内外の活動を緩やかにつなぐ地域施設。誰もが立ち寄りやすく、催しや交流の形に合わせて使える、街の新しい居場所を目指しました。</p>
+            </div>
           </article>
         </div>
       </section>
-      <section class="contact-band">
-        <div class="wrap contact-inner">
+      <section class="service-contact works-contact">
+        <div class="wrap service-contact-inner">
           <div>
             <p class="eyebrow">CONTACT</p>
-            <h2>まだ、構想の段階でも。</h2>
-            <p>土地のこと、建物のこと。まずは、お話を聞かせてください。</p>
+            <h2>次の場所を、<br>いっしょにつくる。</h2>
+            <p>住宅から店舗、地域の施設まで。<br>計画の初期段階から、お気軽にご相談ください。</p>
           </div>
-          <a class="button" href="contact.html">事業・施工について相談する<span class="arrow" aria-hidden="true">↗</span></a>
+          <div class="service-contact-actions"><a class="button" href="contact.html">施工について相談する<span class="arrow" aria-hidden="true">↗</span></a><a class="service-phone" href="tel:00000000000"><span>PHONE</span>000-0000-0000</a></div>
         </div>
       </section>
     </main>

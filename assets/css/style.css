@@ -115,11 +115,11 @@
 .service-feature+.service-feature{margin-top:clamp(90px,10vw,150px)}
 .service-feature--reverse{grid-template-columns:.9fr 1.1fr}
 .service-feature--reverse .service-feature-image{order:2}
-.service-feature--reverse .service-feature-copy{order:1;padding-left:max(0px,calc((100vw - 1200px)/2));padding-right:clamp(46px,7vw,105px)}
+.service-feature--reverse .service-feature-copy{order:1;padding-left:clamp(46px,5vw,72px);padding-right:clamp(20px,3.8vw,62px)}
 .service-feature-image{position:relative;aspect-ratio:3/2;overflow:hidden;background:#dce8e9}
 .service-feature-image:after{content:"SOKEN CONSTRUCTION";position:absolute;right:20px;bottom:14px;color:white;font-size:10px;letter-spacing:.18em;text-shadow:0 1px 5px #16364b}
 .service-feature-image img{object-fit:cover}
-.service-feature-copy{padding:35px clamp(20px,3.8vw,62px) 35px clamp(46px,7vw,105px)}
+.service-feature-copy{min-width:0;padding:35px clamp(20px,3.8vw,62px) 35px clamp(46px,7vw,105px)}
 .service-feature-heading{display:flex;align-items:center;gap:24px;color:var(--blue)}
 .service-feature-heading p{font-size:12px;font-weight:700;letter-spacing:.18em}
 .service-feature-number{font-size:clamp(44px,5vw,70px);font-weight:300;line-height:1;color:#91b8ca;letter-spacing:-.04em}
@@ -188,6 +188,7 @@
   .service-hero-copy p:not(.service-hero-title){font-size:14px;line-height:1.95}
   .service-intro-layout{gap:23px}
   .service-intro-layout .section-title,.service-policy .section-title{font-size:25px}
+  .service-intro-layout>.copy{padding-right:12px;line-height:2.25}
   .service-showcase{padding-top:0}
   .service-feature,.service-feature--reverse{width:calc(100% - 48px)}
   .service-feature-image{aspect-ratio:3/2}
@@ -199,6 +200,7 @@
   .service-feature-copy h2{font-size:26px;letter-spacing:.03em;margin:17px 0 16px}
   #renovation .service-feature-copy h2{font-size:25px}
   .service-feature-copy>p:not(.service-scope){font-size:14px;line-height:2}
+  .service-feature-copy .service-scope{word-break:keep-all;overflow-wrap:normal}
   .process-list{grid-template-columns:1fr;gap:0;margin-top:47px}
   .process-list li{display:grid;grid-template-columns:40px 1fr;gap:0 13px;padding:21px 0;border-top:1px solid #afc4cf}
   .process-list li:before{display:none}
@@ -215,4 +217,135 @@
   .service-contact h2{font-size:26px}
   .service-contact h2+p br{display:none}
   .service-phone{font-size:19px}
+}
+
+/* WORKS page: image-led project archive. */
+.works-portfolio{padding:var(--space) 0}
+.works-projects{display:grid;gap:112px}
+.works-project{width:min(1320px,calc(100% - 80px));margin-inline:auto;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:center;scroll-margin-top:100px}
+.works-project--reverse{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr)}
+.works-project--reverse .works-project-image{order:2}
+.works-project--reverse .works-project-copy{order:1;padding-left:clamp(38px,5vw,72px);padding-right:clamp(32px,5vw,72px)}
+.works-project-image{position:relative;aspect-ratio:4/3;overflow:hidden;margin:0;background:#dce8e9}
+.works-project-image:after{content:"SOKEN / WORKS";position:absolute;right:19px;bottom:14px;color:white;font-size:10px;letter-spacing:.18em;text-shadow:0 1px 5px #16364b}
+.works-project-image img{object-fit:cover;object-position:center}
+.works-project-image--bakery img{object-position:center 65%}
+.works-project-copy{min-width:0;padding:35px clamp(32px,5vw,72px)}
+.works-project-meta{display:flex;align-items:center;gap:23px;color:var(--blue)}
+.works-project-number{font-size:clamp(50px,5.5vw,76px);font-weight:300;line-height:1;color:#91b8ca;letter-spacing:-.04em}
+.works-project-meta p{font-size:12px;font-weight:700;letter-spacing:.15em;word-break:keep-all}
+.works-project-copy h2{font-size:clamp(28px,3vw,41px);font-weight:600;line-height:1.55;letter-spacing:.05em;margin:24px 0 20px;text-wrap:balance}
+.works-project-copy>p{font-size:15px;line-height:2.1;color:var(--muted)}
+.works-contact{margin-top:0}
+@media(max-width:1050px){
+  .works-project{width:calc(100% - 72px)}
+  .works-project-copy,.works-project--reverse .works-project-copy{padding-inline:38px}
+}
+@media(max-width:800px){
+  .works-projects{gap:90px}
+  .works-project,.works-project--reverse{width:calc(100% - 48px);grid-template-columns:1fr}
+  .works-project--reverse .works-project-image,.works-project--reverse .works-project-copy{order:initial}
+  .works-project-copy,.works-project--reverse .works-project-copy{padding:32px 0 0}
+}
+@media(max-width:560px){
+  .works-portfolio{padding-top:76px}
+  .works-projects{gap:76px}
+  .works-project-image{aspect-ratio:4/3}
+  .works-project-copy,.works-project--reverse .works-project-copy{padding-top:25px}
+  .works-project-meta{gap:17px}
+  .works-project-number{font-size:43px}
+  .works-project-meta p{font-size:11px}
+  .works-project-copy h2{font-size:27px;letter-spacing:.03em;margin:16px 0 13px}
+  .works-project-copy>p{font-size:14px;line-height:2}
+}
+
+/* COMPANY page: philosophy, people and profile. */
+.company-section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:60px}
+.company-section-note{font-size:11px;line-height:1.9;letter-spacing:.16em;color:var(--muted);text-align:right}
+.company-message-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:start;gap:clamp(50px,7vw,100px)}
+.company-message-image{position:relative;aspect-ratio:3/2;overflow:hidden;margin:0;background:#dce8e9}
+.company-message-image:after{content:"SOKEN / MESSAGE";position:absolute;right:20px;bottom:14px;color:white;font-size:10px;letter-spacing:.18em;text-shadow:0 1px 5px #16364b}
+.company-message-image img{object-fit:cover;object-position:center}
+.company-message-text{padding-top:4px}
+.company-message-text>p:not(.company-signature){font-size:15px;line-height:2.05;color:var(--muted)}
+.company-message-text>p+p{margin-top:21px}
+.company-signature{margin-top:35px;padding-top:22px;border-top:1px solid var(--line);font-size:18px;font-weight:600;letter-spacing:.07em}
+.company-signature span{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-bottom:5px}
+.company-philosophy{position:relative;overflow:hidden;padding:clamp(95px,10vw,150px) 0 55px;background:var(--sky)}
+.company-philosophy-layout{display:grid;grid-template-columns:1.08fr .92fr;gap:10%;align-items:center;margin-top:50px}
+.company-philosophy h2{font-size:clamp(40px,5.4vw,72px);font-weight:600;line-height:1.55;letter-spacing:.07em}
+.company-philosophy-copy{border-left:1px solid #acc4d0;padding-left:clamp(35px,5vw,72px)}
+.company-philosophy-copy p{font-size:16px;line-height:2.1}
+.company-philosophy-copy p+p{margin-top:25px}
+.company-philosophy-word{display:flex;align-items:flex-end;justify-content:center;min-height:clamp(45px,8.5vw,122px);font-size:clamp(18px,5.25vw,76px);line-height:1;letter-spacing:.04em;color:#d5e6ed;white-space:nowrap;margin:90px 0 -9px;text-align:center;font-weight:600}
+.company-section-lead{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:end}
+.company-section-lead>p{font-size:15px;line-height:2;color:var(--muted);padding-bottom:7px}
+.company-values-list{display:grid;grid-template-columns:repeat(3,1fr);gap:42px;margin-top:70px}
+.company-values-list article{border-top:1px solid var(--line);padding-top:25px}
+.company-values-list article>span{display:block;font-size:43px;font-weight:300;line-height:1;color:#9abccc}
+.company-value-en{font-size:11px;letter-spacing:.18em;color:var(--blue);margin:18px 0 5px}
+.company-values-list h3{font-size:25px;margin-bottom:16px}
+.company-values-list article>p:not(.company-value-en){font-size:14px;line-height:2;color:var(--muted)}
+.company-values-list article>p+p{margin-top:9px}
+.company-profile{background:#f3f6f7}
+.company-profile-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:10%;align-items:start}
+.company-profile-list{margin:0}
+.company-profile-list>div{display:grid;grid-template-columns:160px 1fr;gap:28px;padding:24px 0;border-top:1px solid #c8d7df}
+.company-profile-list>div:last-child{border-bottom:1px solid #c8d7df}
+.company-profile-list dt{font-size:13px;font-weight:700}
+.company-profile-list dd{margin:0;font-size:15px}
+.company-profile-list dd span{display:block}
+.company-profile-list a{display:inline-block;border-bottom:1px solid var(--ink);font-size:18px;letter-spacing:.05em}
+.company-access{position:relative;overflow:hidden;padding:clamp(90px,9vw,135px) 0 35px;background:white}
+.company-access-head{display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:end}
+.company-access h2{font-size:clamp(36px,4.5vw,62px);line-height:1.55;letter-spacing:.07em;margin-top:20px}
+.company-access address{font-style:normal;padding-bottom:8px}
+.company-access address strong{font-size:20px;font-weight:600}
+.company-access address p{font-size:15px;line-height:2.05;color:var(--muted);margin-top:20px}
+.company-access-word{font-size:clamp(70px,15vw,220px);font-weight:600;line-height:.83;letter-spacing:.04em;color:#e4eef2;white-space:nowrap;margin:100px 0 -3px;text-align:center}
+@media(max-width:1050px){
+  .company-message-layout{gap:50px}
+  .company-values-list{gap:28px}
+  .company-profile-layout{gap:7%}
+}
+@media(max-width:800px){
+  .company-message-layout{grid-template-columns:1fr;gap:42px}
+  .company-message-text{max-width:650px}
+  .company-philosophy-layout,.company-section-lead,.company-profile-layout,.company-access-head{grid-template-columns:1fr;gap:35px}
+  .company-philosophy-copy{max-width:650px}
+  .company-values-list{gap:22px}
+  .company-profile-list{width:100%}
+  .company-access address{padding:0}
+}
+@media(max-width:560px){
+  .company-section-head{align-items:flex-start;flex-direction:column;margin-bottom:35px;gap:18px}
+  .company-section-note{text-align:left}
+  .company-message-layout{gap:30px}
+  .company-message-image{aspect-ratio:3/2}
+  .company-message-text>p:not(.company-signature){font-size:14px;line-height:2}
+  .company-message-text>p+p{margin-top:18px}
+  .company-philosophy{padding-top:76px;padding-bottom:36px}
+  .company-philosophy-layout{margin-top:35px;gap:34px}
+  .company-philosophy h2{font-size:32px;letter-spacing:.04em}
+  .company-philosophy-copy{border-left:0;border-top:1px solid #acc4d0;padding:28px 0 0}
+  .company-philosophy-copy p{font-size:14px;line-height:2}
+  .company-philosophy-word{justify-content:flex-start;min-height:42px;font-size:clamp(16px,5.25vw,22px);margin-top:58px;text-align:left}
+  .company-section-lead{gap:22px}
+  .company-values-list{grid-template-columns:1fr;margin-top:45px;gap:32px}
+  .company-values-list article{display:grid;grid-template-columns:48px 1fr;column-gap:15px}
+  .company-values-list article>span{grid-row:1/5;font-size:35px}
+  .company-value-en{margin:0 0 2px}
+  .company-values-list h3{margin-bottom:9px}
+  .company-values-list article>p:not(.company-value-en){grid-column:2}
+  .company-profile-layout{gap:32px}
+  .company-profile-list>div{grid-template-columns:1fr;gap:6px;padding:19px 0}
+  .company-profile-list dt{color:var(--blue)}
+  .company-profile-list dd{font-size:14px}
+  .company-profile-list a{font-size:17px}
+  .company-access{padding-top:76px}
+  .company-access-head{gap:33px}
+  .company-access h2{font-size:31px}
+  .company-access address strong{font-size:18px}
+  .company-access address p{font-size:14px;line-height:2}
+  .company-access-word{font-size:58px;margin-top:62px;text-align:left}
 }
