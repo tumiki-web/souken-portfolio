@@ -97,3 +97,122 @@
   body:has(.hero) .section:has(> .recruit){padding-top:calc(var(--space) - 16px);padding-bottom:calc(var(--space) - 20px)}
   body:has(.hero) .contact-band{padding-top:48px}
 }
+
+/* SERVICE page: detailed business presentation. */
+.service-page-hero{padding-bottom:92px;background:linear-gradient(135deg,#eaf3f7 0%,#f4f8fa 68%,#dcebf2 100%)}
+.service-page-hero .breadcrumbs{margin-bottom:58px}
+.service-hero-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:10%;align-items:end}
+.service-page-hero h1{font-size:clamp(58px,7vw,92px);margin-bottom:9px}
+.service-hero-copy{border-left:1px solid #b7ccd8;padding:8px 0 4px clamp(32px,5vw,72px)}
+.service-hero-copy .service-hero-title{font-size:clamp(28px,3vw,43px);font-weight:600;line-height:1.55;letter-spacing:.06em;color:var(--ink);margin-bottom:24px}
+.service-hero-copy p:not(.service-hero-title){font-size:15px;line-height:2.05;color:var(--muted)}
+.service-hero-copy p+p{margin-top:17px}
+.service-line{white-space:nowrap}
+.service-intro-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:8%;align-items:end}
+.service-intro-layout .copy{padding-bottom:4px}
+.service-showcase{padding:10px 0 var(--space)}
+.service-feature{width:min(1320px,calc(100% - 80px));margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;scroll-margin-top:100px}
+.service-feature+.service-feature{margin-top:clamp(90px,10vw,150px)}
+.service-feature--reverse{grid-template-columns:.9fr 1.1fr}
+.service-feature--reverse .service-feature-image{order:2}
+.service-feature--reverse .service-feature-copy{order:1;padding-left:max(0px,calc((100vw - 1200px)/2));padding-right:clamp(46px,7vw,105px)}
+.service-feature-image{position:relative;aspect-ratio:3/2;overflow:hidden;background:#dce8e9}
+.service-feature-image:after{content:"SOKEN CONSTRUCTION";position:absolute;right:20px;bottom:14px;color:white;font-size:10px;letter-spacing:.18em;text-shadow:0 1px 5px #16364b}
+.service-feature-image img{object-fit:cover}
+.service-feature-copy{padding:35px clamp(20px,3.8vw,62px) 35px clamp(46px,7vw,105px)}
+.service-feature-heading{display:flex;align-items:center;gap:24px;color:var(--blue)}
+.service-feature-heading p{font-size:12px;font-weight:700;letter-spacing:.18em}
+.service-feature-number{font-size:clamp(44px,5vw,70px);font-weight:300;line-height:1;color:#91b8ca;letter-spacing:-.04em}
+.service-feature-copy h2{font-size:clamp(29px,3.2vw,44px);font-weight:600;letter-spacing:.06em;line-height:1.5;margin:23px 0 22px}
+#renovation .service-feature-copy h2{white-space:nowrap}
+.service-feature-copy>p:not(.service-scope){font-size:15px;line-height:2.1;color:var(--muted)}
+.service-feature-copy>p+p{margin-top:14px}
+.service-feature-copy .service-scope{margin-top:27px;padding-top:17px;border-top:1px solid var(--line);font-size:12px;line-height:1.9;letter-spacing:.05em;color:var(--ink)}
+.service-process{background:var(--sky)}
+.service-section-lead{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:end}
+.service-section-lead>.copy{padding-bottom:5px}
+.process-list{list-style:none;margin:70px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr)}
+.process-list li{position:relative;padding:30px 24px 0 0;border-top:1px solid #9eb9c7}
+.process-list li:before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--blue)}
+.process-list span{font-size:13px;color:var(--blue);letter-spacing:.12em}
+.process-list h3{font-size:18px;line-height:1.55;margin:18px 0 13px}
+.process-list p{font-size:13px;line-height:1.9;color:var(--muted)}
+.service-policy .service-section-lead{grid-template-columns:1.08fr .92fr}
+.service-policy .service-section-lead>div{align-self:start}
+.policy-list{display:grid;grid-template-columns:repeat(3,1fr);gap:42px;margin-top:70px}
+.policy-list article{border-top:1px solid var(--line);padding-top:25px}
+.policy-list article>span{display:block;font-size:42px;font-weight:300;line-height:1;color:#9abccc}
+.policy-list .policy-en{font-size:11px;letter-spacing:.18em;color:var(--blue);margin:18px 0 5px}
+.policy-list h3{font-size:25px;margin-bottom:15px}
+.policy-list article>p:last-child{font-size:14px;line-height:2;color:var(--muted)}
+.service-contact{background:var(--ink);color:white;padding:clamp(72px,8vw,112px) 0}
+.service-contact .eyebrow{color:#9ed4ed}
+.service-contact-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:70px}
+.service-contact h2{font-size:clamp(31px,4vw,54px);line-height:1.55;letter-spacing:.06em;margin:19px 0 20px}
+.service-contact h2+p{font-size:14px;line-height:2;color:#d7e5ec}
+.service-contact-actions{flex:0 0 330px;display:grid;gap:19px}
+.service-contact-actions .button{background:white;color:var(--ink);min-width:100%}
+.service-contact-actions .button:hover{background:#dcecf3}
+.service-phone{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #829baa;padding:5px 0 13px;font-size:21px;letter-spacing:.04em}
+.service-phone span{font-size:10px;letter-spacing:.16em;color:#a8c3d0}
+@media(max-width:1050px){
+  .service-feature{width:calc(100% - 72px)}
+  .service-feature-copy{padding-inline:45px 10px}
+  .service-feature--reverse .service-feature-copy{padding-left:10px;padding-right:45px}
+  .process-list li{padding-right:16px}
+  .policy-list{gap:28px}
+}
+@media(max-width:800px){
+  .service-page-hero{padding-bottom:70px}
+  .service-page-hero .breadcrumbs{margin-bottom:42px}
+  .service-hero-layout{grid-template-columns:1fr;gap:42px}
+  .service-hero-copy{padding-left:28px;max-width:650px}
+  .service-intro-layout,.service-section-lead{grid-template-columns:1fr;gap:30px}
+  .service-policy .service-section-lead{grid-template-columns:1fr}
+  .service-feature,.service-feature--reverse{width:calc(100% - 48px);grid-template-columns:1fr}
+  .service-feature--reverse .service-feature-image,.service-feature--reverse .service-feature-copy{order:initial}
+  .service-feature-copy,.service-feature--reverse .service-feature-copy{padding:34px 0 0}
+  .service-feature+.service-feature{margin-top:90px}
+  .process-list{grid-template-columns:repeat(2,1fr);gap:35px 24px}
+  .policy-list{gap:22px}
+  .service-contact-inner{align-items:flex-start;flex-direction:column}
+  .service-contact-actions{width:min(100%,380px);flex-basis:auto}
+}
+@media(max-width:560px){
+  .service-page-hero{padding-top:124px;padding-bottom:58px}
+  .service-page-hero .breadcrumbs{margin-bottom:30px}
+  .service-page-hero h1{font-size:46px}
+  .service-hero-layout{gap:30px}
+  .service-hero-copy{padding:0;border-left:0}
+  .service-hero-copy .service-hero-title{font-size:25px;margin-bottom:17px}
+  .service-hero-copy p:not(.service-hero-title){font-size:14px;line-height:1.95}
+  .service-intro-layout{gap:23px}
+  .service-intro-layout .section-title,.service-policy .section-title{font-size:25px}
+  .service-showcase{padding-top:0}
+  .service-feature,.service-feature--reverse{width:calc(100% - 48px)}
+  .service-feature-image{aspect-ratio:3/2}
+  .service-feature+.service-feature{margin-top:76px}
+  .service-feature-heading{gap:17px}
+  .service-feature-number{font-size:43px}
+  .service-feature-heading p{font-size:10px}
+  .service-feature-copy,.service-feature--reverse .service-feature-copy{padding-top:27px}
+  .service-feature-copy h2{font-size:26px;letter-spacing:.03em;margin:17px 0 16px}
+  #renovation .service-feature-copy h2{font-size:25px}
+  .service-feature-copy>p:not(.service-scope){font-size:14px;line-height:2}
+  .process-list{grid-template-columns:1fr;gap:0;margin-top:47px}
+  .process-list li{display:grid;grid-template-columns:40px 1fr;gap:0 13px;padding:21px 0;border-top:1px solid #afc4cf}
+  .process-list li:before{display:none}
+  .process-list span{grid-row:1/3;padding-top:4px}
+  .process-list h3{margin:0 0 7px;font-size:18px}
+  .process-list p{grid-column:2}
+  .policy-list{grid-template-columns:1fr;margin-top:45px;gap:32px}
+  .policy-list article{display:grid;grid-template-columns:48px 1fr;column-gap:15px}
+  .policy-list article>span{grid-row:1/4;font-size:35px}
+  .policy-list .policy-en{margin:0 0 2px}
+  .policy-list h3{margin-bottom:9px}
+  .policy-list article>p:last-child{grid-column:2}
+  .service-contact-inner{gap:38px}
+  .service-contact h2{font-size:26px}
+  .service-contact h2+p br{display:none}
+  .service-phone{font-size:19px}
+}
