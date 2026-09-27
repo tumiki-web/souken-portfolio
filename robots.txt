@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tumiki-web.github.io/souken-portfolio/sitemap.xml

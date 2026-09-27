@@ -2,15 +2,45 @@
   'use strict';
   const demoForm = document.querySelector('#demo-contact');
   if (demoForm) {
-    // No named controls, endpoint, storage or network API: this UI never sends data.
-    demoForm.addEventListener('submit', event => event.preventDefault());
-    document.querySelector('#demo-fields').disabled = false;
-    document.querySelector('#demo-submit').addEventListener('click', () => {
+    // No named controls, endpoint, storage or network API: values only exist in this page.
+    const fields = document.querySelector('#demo-fields');
+    const inputView = document.querySelector('#contact-input-view');
+    const confirmView = document.querySelector('#contact-confirm-view');
+    const completeView = document.querySelector('#contact-complete-view');
+    const controls = {
+      name: document.querySelector('#inquiry-name'),
+      company: document.querySelector('#inquiry-company'),
+      email: document.querySelector('#inquiry-email'),
+      phone: document.querySelector('#inquiry-phone'),
+      kind: document.querySelector('#inquiry-kind'),
+      message: document.querySelector('#inquiry-message')
+    };
+    const show = view => {
+      inputView.hidden = view !== inputView;
+      confirmView.hidden = view !== confirmView;
+      completeView.hidden = view !== completeView;
+    };
+    const setConfirmation = () => {
+      for (const [key, control] of Object.entries(controls)) {
+        const output = document.querySelector(`#confirm-${key}`);
+        output.textContent = control.value.trim() || '未入力';
+      }
+    };
+    fields.disabled = false;
+    demoForm.addEventListener('submit', event => {
+      event.preventDefault();
       if (!demoForm.reportValidity()) return;
-      const result = document.querySelector('#demo-result');
-      result.textContent = '入力内容を確認しました。デモフォームのため送信されません。入力内容の保存も行っていません。';
-      result.classList.add('notice');
-      result.focus();
+      setConfirmation();
+      show(confirmView);
+      document.querySelector('#confirm-title').focus();
+    });
+    document.querySelector('#demo-back').addEventListener('click', () => {
+      show(inputView);
+      document.querySelector('#demo-confirm').focus();
+    });
+    document.querySelector('#demo-send').addEventListener('click', () => {
+      show(completeView);
+      document.querySelector('#complete-title').focus();
     });
   }
   const toggle = document.querySelector('.menu-toggle');

@@ -11,7 +11,7 @@
 - `build-pages.cjs`：文章と共通ヘッダー・フッターを管理。編集後に `node build-pages.cjs` で6ページを再生成します。
 - `assets/css/style.css`：共通デザイントークン、各セクション、800px / 560pxを中心とするレスポンシブ指定。
 - `assets/js/main.js`：モバイルメニュー、Escape、フォーカス循環、背景のinert、画像未配置時の表示。
-- `assets/images/favicon.svg`：蒼建の仮ブランドマーク。
+- `favicon.ico`：蒼建の正式ブランドfavicon。
 - `IMAGE-GUIDE.md`：画像制作・差し替え仕様。
 
 直接HTMLを編集した場合、再生成時には上書きされます。共通部品を一元管理しつつ、閲覧時にはJavaScriptに頼らず本文・ナビ・フッターを表示します。外部フォント・CDNへの接続はありません。
